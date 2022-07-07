@@ -1,0 +1,35 @@
+GET {{api-server}}/report/expense
+Accept: application/json
+
+###
+GET {{api-server}}/report/income
+Accept: application/json
+
+###
+GET {{api-server}}/report/income/95a8dac0-0328-4e1b-b0a8-035199b064f1
+Content-Type: application/json
+
+###
+POST {{api-server}}/report/expense
+Content-Type: application/json
+
+{
+  "source": "coopel",
+  "amount": {{$randomInt}}
+}
+
+###
+PUT {{api-server}}/report/income/95a8dac0-0328-4e1b-b0a8-035199b064f1
+Content-Type: application/json
+
+{
+  "source": "Salary",
+  "amount": {{$randomInt}}
+}
+
+###
+DELETE {{api-server}}/report/income/95a8dac0-0328-4e1b-b0a8-035199b064f1
+Content-Type: application/json
+
+###
+
